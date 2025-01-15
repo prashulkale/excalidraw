@@ -1,0 +1,22 @@
+services:
+  postgresdb:
+    image: postgres
+    container_name: excalidraw_postgres
+    environment:
+      POSTGRES_USER: excalidraw_user
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: excalidraw_db
+    ports:
+      - "5432:5432"
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     networks:
+#       - excalidraw_network
+
+# volumes:
+#   postgres_data:
+
+
+# networks:
+#   excalidraw_network:
+#     driver: bridge
