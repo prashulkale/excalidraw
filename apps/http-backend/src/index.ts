@@ -16,6 +16,7 @@ app.post("/signup", async (req, res) => {
     if (!parsedData.success) {
       res.status(400).json({
         message: "Incorrect inputs",
+        errors: parsedData.error.issues
       });
       return;
     }
